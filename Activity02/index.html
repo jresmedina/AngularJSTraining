@@ -1,0 +1,27 @@
+<!doctype html>
+<html ng-app="app">
+
+<head>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-storage.js"></script>
+    <script src="scripts/angular-ui-router-min.js"></script>
+    <script src="constants/baseUrl.js"></script>
+    <script src="services/loginService.js"></script>
+    <script src="controllers/loginController.js"></script>
+    <script src="controllers/dashboardController.js"></script>
+    <script src="services/apiInterceptor.js"></script>
+    <script src="services/routingService.js"></script>
+    <!--<script src="controllers/mainController.js"></script>-->
+    
+</head>
+
+<body ng-controller="MainCtrl as main" ng-cloak>
+    <div ng-if="main.currentUser">
+        <a href ng-click="main.logout()">Logout</a>{{main.currentUser.username}}
+    </div>
+    <div ui-view>
+    </div>
+        <script src="scripts/app.js"></script>
+</body>
+
+</html>

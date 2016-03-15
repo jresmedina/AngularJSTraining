@@ -1,0 +1,17 @@
+    .grid {
+      width: 100%;
+      height: 600px;
+    }
+    .gridtransaction {
+      width: 100%;
+      height: 1000px;
+    }
+
+.datepickerdemoBasicUsage {
+  /** Demo styles for mdCalendar. */ }
+  .datepickerdemoBasicUsage md-content {
+    padding-bottom: 200px; }
+  .datepickerdemoBasicUsage .validation-messages {
+    font-size: 11px;
+    color: darkred;
+    margin: 10px 0 0 25px; }

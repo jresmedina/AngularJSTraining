@@ -1,0 +1,22 @@
+<div class="body-content" ng-controller="MainCtrl">
+    <h1> Transaction History</h1>
+    </br>
+    </br>
+    <div class="container">
+        <section ng-init="tab=0">
+            <ul class="nav nav-pills">
+                <li ng-class="{active: tab===1}"> <a href ng-click="getModifiedProduct();tab=1"><h4>Modified</h4></a></li>
+                <li ng-class="{active: tab===2}"><a href ng-click="getDeletedProduct();tab=2"><h4>Deleted</h4></a></li>
+            </ul>
+        </section>
+
+        <div ng-show="tab===0">
+            <h2>Please select transactions</h2>
+        </div>
+    </div>
+    <div class="panel page-header" ng-show="tab===1">
+        <div id="gridModified" ui-grid="gridOptionModified" ui-grid-move-columns ui-grid-pagination ui-grid-exporter class="gridtransaction"></div>
+    </div>
+    <div class="panel page-header" ng-show="tab===2">
+        <div id="gridDeleted" ui-grid="gridOptionDeleted" ui-grid-move-columns ui-grid-pagination ui-grid-exporter class="gridtransaction"></div>
+    </div>

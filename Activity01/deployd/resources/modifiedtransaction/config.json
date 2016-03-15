@@ -1,0 +1,109 @@
+{
+	"type": "Collection",
+	"properties": {
+		"productId": {
+			"name": "productId",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "productId",
+			"order": 0
+		},
+		"productName": {
+			"name": "productName",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "productName",
+			"order": 1
+		},
+		"description": {
+			"name": "description",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "description",
+			"order": 2
+		},
+		"itemCode": {
+			"name": "itemCode",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "itemCode",
+			"order": 3
+		},
+		"qtyPurchase": {
+			"name": "qtyPurchase",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "qtyPurchase",
+			"order": 4
+		},
+		"qtySold": {
+			"name": "qtySold",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "qtySold",
+			"order": 5
+		},
+		"unitPrice": {
+			"name": "unitPrice",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "unitPrice",
+			"order": 6
+		},
+		"supplier": {
+			"name": "supplier",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "supplier",
+			"order": 7
+		},
+		"amount": {
+			"name": "amount",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "amount",
+			"order": 8
+		},
+		"datePurchase": {
+			"name": "datePurchase",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "datePurchase",
+			"order": 9
+		},
+		"type": {
+			"name": "type",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "type",
+			"order": 10
+		},
+		"date": {
+			"name": "date",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "date",
+			"order": 11
+		},
+		"modified": {
+			"name": "modified",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "modified",
+			"order": 12
+		}
+	}
+}

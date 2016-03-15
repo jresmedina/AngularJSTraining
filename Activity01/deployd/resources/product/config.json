@@ -1,0 +1,101 @@
+{
+	"type": "Collection",
+	"properties": {
+		"productName": {
+			"name": "productName",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "productName",
+			"order": 0
+		},
+		"description": {
+			"name": "description",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "description",
+			"order": 1
+		},
+		"itemCode": {
+			"name": "itemCode",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "itemCode",
+			"order": 2
+		},
+		"qtyPurchase": {
+			"name": "qtyPurchase",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "qtyPurchase",
+			"order": 3
+		},
+		"qtySold": {
+			"name": "qtySold",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "qtySold",
+			"order": 4
+		},
+		"unitPrice": {
+			"name": "unitPrice",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "unitPrice",
+			"order": 5
+		},
+		"supplier": {
+			"name": "supplier",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "supplier",
+			"order": 6
+		},
+		"amount": {
+			"name": "amount",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "amount",
+			"order": 7
+		},
+		"datePurchase": {
+			"name": "datePurchase",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "datePurchase",
+			"order": 8
+		},
+		"type": {
+			"name": "type",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "type",
+			"order": 9
+		},
+		"createdDate": {
+			"name": "createdDate",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "createdDate",
+			"order": 10
+		},
+		"modifiedDate": {
+			"name": "modifiedDate",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "modifiedDate",
+			"order": 11
+		}
+	}
+}

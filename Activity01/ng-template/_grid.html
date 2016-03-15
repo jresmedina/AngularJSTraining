@@ -1,0 +1,19 @@
+<div class="body-content">
+    <div ng-controller="MainCtrl">
+        <button id="refreshButton" type="button" class="btn btn-success" ng-click="refreshData()">Show Data</button>
+        <button type="button" id="addData" class="btn btn-primary" ng-show="!addBtn" ng-click="addBtn=!addBtn">Add New Product</button>
+        <button type="button" id="hideData" class="btn btn-warning" ng-show="addBtn" ng-click="addBtn=!addBtn">Hide Form</button>
+        
+        <br />
+        <br />
+        <div>
+            <div ng-if="addBtn" class="container">
+                <div ng-include="'ng-template/_partialform.html'">
+                </div>
+            </div>
+            <div ng-show="!addBtn" id="grid1" ui-grid="gridOptions" ui-grid-edit ui-grid-selection ui-grid-move-columns ui-grid-exporter ui-grid-pagination
+            class="grid">
+            </div>
+        </div>
+    </div>
+</div>

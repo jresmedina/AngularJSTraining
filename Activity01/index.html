@@ -1,0 +1,48 @@
+<!doctype html>
+<html ng-app="app">
+
+<head>
+    <link rel="stylesheet" href="Scripts/angular-ui-grid/ui-grid.css" type="text/css">
+    <link rel="stylesheet" href="Contents/main.css" type="text/css">
+    <link rel="stylesheet" href="Contents/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="Contents/bootstrap-dialog.css" type="text/css">
+    <link rel="stylesheet" href="Contents/angular-material.css" type="text/css">
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/angular-touch.js"></script>
+    <script src="Scripts/angular-animate.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/csv.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/pdfmake.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/vfs_fonts.js"></script>
+    <script src="Scripts/angular-ui-grid/ui-grid.js"></script>
+    <script src="Scripts/jquery.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/bootstrap-dailog.js"></script>
+    <script src="Scripts/angular-aria.js"></script>
+    <script src="Scripts/angular-material.js"></script>
+    <script src="RoutingService/route.js"></script>
+    <script src="ApiService/productFactory.js"></script>
+    <script src="ApiService/transactionFactory.js"></script>
+    <script src="Scripts/app.js"></script>
+
+    <base href="/" />
+</head>
+
+<body>
+
+    <div class="navbar navbar-inverse">
+        <div class="container">
+
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/">Inventory</a></li>
+                    <li><a href="/transaction">Transaction</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div ng-view> </div>
+
+</body>
+
+</html>
