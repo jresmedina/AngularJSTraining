@@ -1,0 +1,93 @@
+<div class="container">
+    <!--<div class="col-sm-8 col-sm-offset-2">-->
+    <div class="page-header">
+        <h1>Add new product</h1>
+    </div>
+    <form name="userForm" novalidate>
+        <div class="panel panel-primary">
+            <div class="panel-body">
+                <div class="col-xs-12">
+                    <div class="col-xs-4">
+                        <div class="form-group" ng-class="{'has-error': userForm.productName.$invalid && !userForm.productName.$pristine}">
+                            <label>Product Name: </label>
+                            <input type="text" name="productName" class="form-control" ng-model="product.productName" required>
+                            <p ng-show="userForm.productName.$invalid && !userForm.productName.$pristine" class="help-block"> Product name is required.</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="form-group" ng-class="{'has-error': userForm.description.$invalid && !userForm.description.$pristine}">
+                            <label>Description: </label>
+                            <input type="text" name="description" class="form-control" ng-model="product.description" required>
+                            <p ng-show="userForm.description.$invalid && !userForm.description.$pristine" class="help-block"> Description is required.</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="form-group" ng-class="{'has-error': userForm.productCode.$invalid && !userForm.productCode.$pristine}">
+                            <label>Product Code: </label>
+                            <input type="text" name="productCode" class="form-control" ng-model="product.productCode" required>
+                            <p ng-show="userForm.productCode.$invalid && !userForm.productCode.$pristine" class="help-block"> Product code is required.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="col-xs-2">
+                        <div class="form-group" ng-class="{'has-error': userForm.availableQty.$invalid && !userForm.availableQty.$pristine}">
+                            <label>Quantity Purchased: </label>
+                            <input type="number" name="availableQty" class="form-control" ng-model="product.availableQty" required>
+                            <p ng-show="userForm.availableQty.$invalid && !userForm.availableQty.$pristine" class="help-block"> Qty purchase is required.</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                        <div class="form-group" ng-class="{'has-error': userForm.unitPrice.$invalid && !userForm.unitPrice.$pristine}">
+                            <label>Unit Price: </label>
+                            <input type="number" name="unitPrice" class="form-control" ng-model="product.unitPrice" required>
+                            <p ng-show="userForm.unitPrice.$invalid && !userForm.unitPrice.$pristine" class="help-block"> Unit price is required.</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="form-group" ng-class="{'has-error': userForm.supplier.$invalid && !userForm.supplier.$pristine}">
+                            <label>Supplier: </label>
+                            <input type="text" name="supplier" class="form-control" ng-model="product.supplier" required>
+                            <p ng-show="userForm.supplier.$invalid && !userForm.supplier.$pristine" class="help-block"> Supplier is required.</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                        <div class="form-group" ng-class="{'has-error': userForm.totalAmount.$invalid && !userForm.totalAmount.$pristine}">
+                            <label>Total Amount: </label>
+                            <input type="number" name="totalAmount" class="form-control" ng-model="product.totalAmount" required>
+                            <p ng-show="userForm.totalAmount.$invalid && !userForm.totalAmount.$pristine" class="help-block"> Total amount is required.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="col-xs-3">
+                        <div class="form-group" ng-class="{'has-error': userForm.datePurchased.$invalid && !userForm.datePurchased.$pristine}">
+                            <label>Date Purchased: </label>
+                            <p class="input-group">
+                                <!--<input type="text" class="form-control" uib-datepicker-popup ng-model="product.datePurchased" is-open="popup2.opened" min-date="minDate"
+                                    max-date="maxDate" datepicker-options="dateOptions" ng-required="true" close-text="Close"
+                                    />-->
+                                <!--<span class="input-group-btn">
+                                     <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                  </span>-->
+                                <input type="date" class="form-control" ng-model="product.datePurchased" required/>
+                            </p>
+                            <p ng-show="userForm.datePurchased.$invalid && !userForm.datePurchased.$pristine" class="help-block"> Date purchase is required.</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="form-group" ng-class="{'has-error': userForm.type.$invalid && !userForm.type.$pristine}">
+                            <label>Type: </label>
+                            <input type="text" name="type" class="form-control" ng-model="product.type" required>
+                            <p ng-show="userForm.type.$invalid && !userForm.type.$pristine" class="help-block"> Type is required.</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <button type="button" class="btn btn-primary" ng-disabled="userForm.$invalid" ng-click="inventory.saveOrder(product)">Add</button>
+                        <button type="button" class="btn btn-warning" ng-click="inventory.close()">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

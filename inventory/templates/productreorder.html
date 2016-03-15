@@ -1,0 +1,58 @@
+<div class="container">
+    <!--<div class="col-sm-8 col-sm-offset-2">-->
+    <div class="page-header">
+        <h1>Product Re-order</h1>
+    </div>
+    <form name="userForm" novalidate>
+        <div class="panel panel-primary">
+            <div class="panel-body">
+                <div class="col-xs-12">
+                    <div class="col-xs-4">
+
+                        <div class="form-group" ng-class="{'has-error': userForm.productName.$invalid && !userForm.productName.$pristine}">
+                            <label>Product Name: </label>
+                            <select class="ac-select stateList" ac-model="inventory.productId" ac-options="product.productName for product in inventory.getProducts()"
+                            ac-settings="{ loadOnCreate: false, loadOnOpen: true, minWidth: ' 330px '}" ac-change="inventory.getSelected(value)"
+                            ng-required>
+                            </select>
+                            <!--<select name="productName" class="form-control" ng-model="inventory.productId" ng-change="inventory.getSelected()" required>
+                                <option ng-repeat="product in productList" value="{{product._id}}">{{product.productName}}</option>
+                            </select>-->
+                            <!--<div class="form-control">-->
+                            <p ng-show="userForm.productName.$invalid && !userForm.productName.$pristine" class="help-block"> Product name is required.</p>
+                            <!--</div>-->
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <label>Available Qty: </label>
+                        <input type="number" name="availableQty" class="form-control" ng-model="product.availableQty" value="{{inventory.selectedItem.availableQty}}"
+                        disabled>
+
+                    </div>
+
+                </div>
+                <div class="col-xs-12">
+                    <div class="col-xs-4">
+                        <div class="form-group" ng-class="{'has-error': userForm.orderQty.$invalid && !userForm.orderQty.$pristine}">
+                            <label>Order Qty: </label>
+                            <input type="number" name="orderQty" class="form-control" ng-model="product.orderQty" required>
+                            <p ng-show="userForm.orderQty.$invalid && !userForm.orderQty.$pristine" class="help-block"> Order Quantity is required.</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <label>Total Amount: </label>
+                        <!--<div class="form-group" ng-class="{'has-error': userForm.totalAmount.$invalid && !userForm.totalAmount.$pristine}">-->
+                        <input type="number" name="totalAmount" class="form-control" ng-model="product.totalAmount" value="{{inventory.selectedItem.unitPrice * product.orderQty}}"
+                        disabled>
+                        <!--<p ng-show="userForm.totalAmount.$invalid && !userForm.totalAmount.$pristine" class="help-block"> Total Amount is required.</p>-->
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <button type="button" class="btn btn-primary" ng-disabled="userForm.$invalid" ng-click="inventory.saveOrder(product)">Save</button>
+                    <button type="button" class="btn btn-warning" ng-click="inventory.close()">Close</button>
+                </div>
+            </div>
+        </div>
+</div>
+</form>
+</div>
